@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <title>WT Lab 5-Buitl in functions</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form class="form1">
+
+                    <h2>SEARCHING ARRAY</h2>
+
+                    <div class="name">Enter array Elements :- <br> <br>
+                        <input id="ip" type="text" placeholder="Enter elements here" /><br>
+                        <br> Enter search element :<br> <br>
+                        <input type="text" id="key" placeholder="Enter search key here"><br><br>
+
+                        Output:-
+                        <br><br>
+                        <input type="text" id="op" placeholder="Result appears here" />
+                    </div> <br><br>
+                    <input type="button" value="Linear Search" onclick="linear()">
+                    <input type="button" value="Binnary Search" onclick="binary()">
+                    <input type="reset">
+
+                </form>
+            </td>
+            <td>
+                <form id="form">
+
+                    <h2>SORTING ARRAY</h2>
+
+                    <div class="name">Enter array Elements :- <br> <br>
+                        <input id="ip-sort" type="text" placeholder="Enter elements here" /><br>
+                        <br>
+                        Output:-
+                        <br><br>Bubble Sort :
+                        <input type="text" id="op-sort-b" placeholder="Sorted array" />
+                        <br><br>Insertion Sort :
+                        <input type="text" id="op-sort-i" placeholder="Sorted array" />
+                        <br><br>
+                    </div>
+                    <br>
+                    <input type="button" value="Bubble" onclick="bubble()">
+                    <input type="button" value="Insertion" onclick="insertion()">
+                    <input type="reset">
+                </form>
+            </td>
+
+        </tr>
+    </table>
+
+
+    <br>
+
+
+    <script lang="javascript">
+
+        function bubble() {
+            let ip = document.getElementById("ip-sort").value.trim();
+            // ip = ip.trim();
+            let inputArr = ip.split(" ").map(Number);
+            console.log(typeof (inputArr))
+            // op.sort(function (a, b) { return b - a })           
+            let len = inputArr.length;
+            for (let i = 0; i < len; i++) {
+                for (let j = 0; j < len; j++) {
+                    if (inputArr[j] > inputArr[j + 1]) {
+                        let tmp = inputArr[j];
+                        inputArr[j] = inputArr[j + 1];
+                        inputArr[j + 1] = tmp;
+                    }
+                }
+            }
+            // document.getElementById("ip").value = op.toString();
+            document.getElementById("op-sort-b").value = inputArr.toString();
+        }
+        function insertion() {
+            let ip = document.getElementById("ip-sort").value.trim();
+            ip = ip.split(" ").map(Number)
+            console.log(typeof (ip))
+
+            for (let i = 1; i < ip.length; i++) {
+                // Choosing the first element in our unsorted subarray
+                let current = ip[i];
+                // The last element of our sorted subarray
+                let j = i - 1;
+                while ((j > -1) && (current < ip[j])) {
+                    ip[j + 1] = ip[j];
+                    j--;
+                }
+                ip[j + 1] = current;
+            }
+
+
+            document.getElementById("op-sort-i").value = ip.toString();
+        }
+
+        function linear() {
+            let ip1 = document.getElementById("ip").value;
+            let ip = ip1.split(" ").map(Number)
+            let key1 = document.getElementById("key").value;
+            let key = parseInt(key1)
+
+            for (let i = 0; i < ip.length; i++) {
+                if (ip[i] == key) {
+
+                    document.getElementById("op").value = `Key ${ip[i]} found at index ${i}`
+                    return;
+                }
+            }
+            console.log("After loop")
+            document.getElementById("op").value = "Key not found"
+
+
+
+
+        }
+        function binary() {
+            let ip1 = document.getElementById("ip").value;
+            let ipp = ip1.split(" ").map(Number)
+            let ip = ip1.split(" ").map(Number)
+            ip.sort(function(a, b){return a - b})
+            console.log(ip.toString())
+
+            let key1 = document.getElementById("key").value;
+            let key = parseInt(key1)
+            let start = 0, end = ip.length - 1;
+
+            // Iterate while start not meets end
+            while (start <= end) {
+
+                // Find the mid index
+                let mid = Math.floor((start + end)/2);
+
+                // If element is present at mid, return True
+                if (ip[mid] === key) {
+                    document.getElementById("op").value = `Key ${ip[mid]} found at index ${ipp.indexOf(key)}`
+                    return;
+                }
+
+                // Else look in left or right half accordingly
+                else if (ip[mid] < key)
+                    start = mid + 1;
+                else
+                    end = mid - 1;
+            }          
+            document.getElementById("op").value = "Key not found"      
+  
+        }
+    </script>
+
+
+</body>
+
+</html>

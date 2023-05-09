@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>WT Lab 4</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<video id="video" loop="loop">
+		<source src="bgvideo.mp4" type="video/mp4">
+	</video>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#"><span>TXON</span> InfoTech</a> <button
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+				class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+				type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">department</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
+
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="carousel-caption">
+					<h5>TXON Infotech,Pune</h5>
+					<p class=" d-none d-md-block">Dream as big as Ocean</p>
+					<!-- <p><a href="#react">Explore</a></p> -->
+					<button id="v" type="button" class="btn btn-primary" onclick="p()">Play-Pause</button>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div id="container-fluid">
+			<div class="container bg-light text-lg p-4">
+				<h2 class="">Services</h2>
+				<p>
+					Our team of experts can help you with a wide range of IT solutions
+					including:
+				</p>
+				<ul class="list-group list-group-numbered">
+					<li class="list-group-item">Software Development</li>
+					<li class="list-group-item">Cloud Services</li>
+					<li class="list-group-item">Web Design</li>
+					<li class="list-group-item">Data Analytics</li>
+					<li class="list-group-item">Mobile App Development</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container bg-light p-5">			
+		<div class="card-group m-4 gap-3 text-center">	
+
+			<div class="card" id="react">
+				<img src="react.jpg" class="card-img-top" alt="...">
+				<div class="card-body ">
+					<h5 class="card-title">React</h5>
+					<p class="card-text">Frontend Development with React,Angular</p>
+				</div>
+				<div class="card-footer">
+					<small class="text-muted">Txon Infotech,Pune</small>
+				</div>
+			</div>
+			<div class="card">
+				<img src="angular1.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Angular</h5>
+					<p class="card-text">Frontend Development with Angular V.5</p>
+				</div>
+				<div class="card-footer">
+					<small class="text-muted">Txon Infotech,Pune</small>
+				</div>
+			</div>
+			<div class="card">
+				<img src="typescript.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Typescript</h5>
+					<p class="card-text">Frontend Development with Typescript</p>
+				</div>
+				<div class="card-footer">
+					<small class="text-muted">Txon Infotech,Pune</small>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
+		<!-- footer -->
+		<footer class="bg-light text-center text-lg-start">
+			<!-- Grid container -->
+			<div class="container p-4">
+				<!--Grid row-->
+				<div class="row">
+					<!--Grid column-->
+					<div class="col-lg-6 col-md- mb-4 mb-md-0">
+						<h5 class="text-uppercase">Txon Infotech,Pune</h5>
+
+						<p>
+							Expert insights and strategies to address your priorities and solve your most pressing
+							challenges.
+						</p>
+					</div>
+					<!--Grid column-->
+
+					<!--Grid column-->
+					<div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+						<h5 class="text-uppercase">Txon Infotech,Pune.</h5>
+
+						<p>
+							We build a distinct agile approach in web development & design services to meet all the
+							business needs and stay out from competitors. Our website development outcome is creating
+							abiding impressions, both visually and collaboratively.
+						</p>
+					</div>
+					<!--Grid column-->
+				</div>
+				<!--Grid row-->
+			</div>
+			<!-- Grid container -->
+
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+				© 2023 Copyright:
+				<a class="text-dark" href="#">TXON INFOTECH.COM</a>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- footer -->
+	</div>
+	<br><br>
+
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js">
+	</script>
+	<script>
+
+		document.getElementById('v').onclick = function () {
+
+			let video = document.getElementById('video');
+			if (video.paused) {
+				video.play();
+			}
+			else {
+				video.pause();
+			}
+		};
+	</script>
+</body>
+
+</html>
